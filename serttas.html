@@ -95,6 +95,8 @@
             <a href="#" class="text-2xl font-black text-brand-red tracking-widest uppercase">
                 Moto <span class="text-white">Serttaş</span>
             </a>
+            
+            <!-- Masaüstü Menü -->
             <nav class="hidden lg:flex space-x-8 font-semibold text-sm">
                 <a href="#neden-biz" class="hover:text-brand-red transition">Neden Biz?</a>
                 <a href="#hizmetler" class="hover:text-brand-red transition">Hizmetlerimiz</a>
@@ -102,11 +104,29 @@
                 <a href="#yorumlar" class="hover:text-brand-red transition">Yorumlar</a>
                 <a href="#iletisim" class="hover:text-brand-red transition">İletişim</a>
             </nav>
+
             <a href="https://wa.me/905325014710" target="_blank" class="hidden md:flex bg-brand-red text-white px-6 py-2 rounded-md font-bold hover:bg-red-700 transition items-center gap-2">
                 <i class="fa-brands fa-whatsapp text-xl"></i> Randevu Al
             </a>
-            <!-- Mobil Menü Butonu (Görsel amaçlı) -->
-            <button class="lg:hidden text-2xl text-white hover:text-brand-red"><i class="fa-solid fa-bars"></i></button>
+
+            <!-- Mobil Menü Butonu (Aktif) -->
+            <button id="menu-btn" class="lg:hidden text-2xl text-white hover:text-brand-red focus:outline-none">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+
+        <!-- Mobil Açılır Menü Paneli (Eklenen Bölüm) -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-brand-gray border-b border-brand-light px-4 pt-4 pb-6 space-y-4 shadow-2xl">
+            <a href="#neden-biz" class="mobile-link block font-semibold text-base hover:text-brand-red transition py-2 border-b border-brand-light/40">Neden Biz?</a>
+            <a href="#hizmetler" class="mobile-link block font-semibold text-base hover:text-brand-red transition py-2 border-b border-brand-light/40">Hizmetlerimiz</a>
+            <a href="#surec" class="mobile-link block font-semibold text-base hover:text-brand-red transition py-2 border-b border-brand-light/40">İşleyiş</a>
+            <a href="#yorumlar" class="mobile-link block font-semibold text-base hover:text-brand-red transition py-2 border-b border-brand-light/40">Yorumlar</a>
+            <a href="#iletisim" class="mobile-link block font-semibold text-base hover:text-brand-red transition py-2 border-b border-brand-light/40">İletişim</a>
+            <div class="pt-2">
+                <a href="https://wa.me/905325014710" target="_blank" class="w-full bg-brand-red text-white px-6 py-3 rounded-md font-bold hover:bg-red-700 transition flex items-center justify-center gap-2 text-center uppercase tracking-wider">
+                    <i class="fa-brands fa-whatsapp text-xl"></i> WhatsApp Randevu Al
+                </a>
+            </div>
         </div>
     </header>
 
@@ -117,11 +137,11 @@
                 <div class="inline-block bg-brand-light text-brand-red font-bold px-4 py-1 rounded-full text-sm mb-6 uppercase tracking-wider border border-brand-red/30">
                     Maltepe'nin Güvenilir Adresi
                 </div>
-                <h1 class="text-5xl md:text-7xl font-black mb-6 leading-tight uppercase">
+                <h1 class="text-4xl sm:text-5xl md:text-7xl font-black mb-6 leading-tight uppercase">
                     Motorunuz İçin <br>
                     <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-red to-red-500">Kusursuz İşçilik</span>
                 </h1>
-                <p class="text-lg md:text-xl text-gray-300 mb-10 max-w-2xl leading-relaxed">
+                <p class="text-base sm:text-lg md:text-xl text-gray-300 mb-10 max-w-2xl leading-relaxed">
                     Periyodik bakımdan motor revizyonuna, argon kaynağından şase düzeltmeye kadar tüm mekanik ve elektronik ihtiyaçlarınızda garantili çözümler sunuyoruz.
                 </p>
                 <div class="flex flex-col sm:flex-row gap-4">
@@ -139,22 +159,22 @@
     <!-- İstatistikler Banner -->
     <div class="bg-brand-red py-8 border-y border-red-800">
         <div class="container mx-auto px-4 max-w-6xl">
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center divide-x divide-red-800/50">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center divide-x-0 md:divide-x divide-red-800/50">
                 <div>
                     <div class="text-3xl md:text-4xl font-black text-white mb-1">15+</div>
-                    <div class="text-red-200 text-sm font-bold uppercase tracking-wider">Yıllık Tecrübe</div>
+                    <div class="text-red-200 text-xs sm:text-sm font-bold uppercase tracking-wider">Yıllık Tecrübe</div>
                 </div>
                 <div>
                     <div class="text-3xl md:text-4xl font-black text-white mb-1">%100</div>
-                    <div class="text-red-200 text-sm font-bold uppercase tracking-wider">Garantili İşçilik</div>
+                    <div class="text-red-200 text-xs sm:text-sm font-bold uppercase tracking-wider">Garantili İşçilik</div>
                 </div>
                 <div>
                     <div class="text-3xl md:text-4xl font-black text-white mb-1">5000+</div>
-                    <div class="text-red-200 text-sm font-bold uppercase tracking-wider">Tamamlanan İşlem</div>
+                    <div class="text-red-200 text-xs sm:text-sm font-bold uppercase tracking-wider">Tamamlanan İşlem</div>
                 </div>
                 <div>
                     <div class="text-3xl md:text-4xl font-black text-white mb-1">Tüm</div>
-                    <div class="text-red-200 text-sm font-bold uppercase tracking-wider">Marka Modeller</div>
+                    <div class="text-red-200 text-xs sm:text-sm font-bold uppercase tracking-wider">Marka Modeller</div>
                 </div>
             </div>
         </div>
@@ -165,24 +185,24 @@
         <div class="container mx-auto max-w-6xl">
             <div class="flex flex-col lg:flex-row gap-16 items-center">
                 <!-- Fotoğraf Alanı: İş üzeri modern mekanik detay -->
-                <div class="lg:w-1/2 relative">
-                    <div class="absolute inset-0 bg-brand-red rounded-lg transform translate-x-4 translate-y-4"></div>
-                    <img src="https://lh7-us.googleusercontent.com/sitesv-images-rt/AMxu72uy5uXgMEL6n5d_KLrKbYHvg688Je7tTyxninn--kOmnFYZDD92trJ2JyxSABZgMdK-8GSS7GaRJa7hLQcCJpH5NL1PzV8SfshdqvkAsyDgMIvbDrXV9f6fKwkPhxmv9NnhgmlX60YdfAD5FO9orm9nouPj3c0xfhwWcd48iHEn9tYg9at-3pgoCHSNKZt0_-lYlu9SnQvntJ_mh0J-KpdzVB42JlovBntF8yKKjKw=w1280" alt="Usta İş Başında" class="relative z-10 rounded-lg shadow-2xl w-full h-[500px] object-cover grayscale-[20%]">
+                <div class="lg:w-1/2 relative w-full">
+                    <div class="absolute inset-0 bg-brand-red rounded-lg transform translate-x-4 translate-y-4 hidden sm:block"></div>
+                    <img src="https://lh7-us.googleusercontent.com/sitesv-images-rt/AMxu72uy5uXgMEL6n5d_KLrKbYHvg688Je7tTyxninn--kOmnFYZDD92trJ2JyxSABZgMdK-8GSS7GaRJa7hLQcCJpH5NL1PzV8SfshdqvkAsyDgMIvbDrXV9f6fKwkPhxmv9NnhgmlX60YdfAD5FO9orm9nouPj3c0xfhwWcd48iHEn9tYg9at-3pgoCHSNKZt0_-lYlu9SnQvntJ_mh0J-KpdzVB42JlovBntF8yKKjKw=w1280" alt="Usta İş Başında" class="relative z-10 rounded-lg shadow-2xl w-full h-[350px] sm:h-[500px] object-cover grayscale-[20%]">
                     <!-- Rozet -->
-                    <div class="absolute -bottom-6 -left-6 bg-brand-dark p-6 rounded-lg border border-brand-light z-20 flex items-center gap-4 shadow-xl">
-                        <i class="fa-solid fa-wrench text-4xl text-brand-red"></i>
+                    <div class="absolute -bottom-6 left-4 sm:-left-6 bg-brand-dark p-4 sm:p-6 rounded-lg border border-brand-light z-20 flex items-center gap-4 shadow-xl">
+                        <i class="fa-solid fa-wrench text-3xl sm:text-4xl text-brand-red"></i>
                         <div>
-                            <div class="font-black text-xl">Usta Eller</div>
-                            <div class="text-sm text-gray-400">Modern Ekipman</div>
+                            <div class="font-black text-lg sm:text-xl">Usta Eller</div>
+                            <div class="text-xs sm:text-sm text-gray-400">Modern Ekipman</div>
                         </div>
                     </div>
                 </div>
                 
                 <!-- Metin Alanı -->
-                <div class="lg:w-1/2">
+                <div class="lg:w-1/2 mt-6 lg:mt-0">
                     <h2 class="text-sm font-bold text-brand-red uppercase tracking-widest mb-2">Hakkımızda</h2>
-                    <h3 class="text-4xl md:text-5xl font-black mb-6 uppercase">Motorunuz <br>Emin Ellerde</h3>
-                    <p class="text-gray-400 text-lg mb-8 leading-relaxed">
+                    <h3 class="text-3xl sm:text-4xl md:text-5xl font-black mb-6 uppercase">Motorunuz <br>Emin Ellerde</h3>
+                    <p class="text-gray-400 text-base sm:text-lg mb-8 leading-relaxed">
                         Motosikletiniz sadece bir ulaşım aracı değil, bir tutkudur. Biz de bu tutkuyu sizinle paylaşıyor, atölyemize giren her motosiklete kendi motorumuzmuş gibi özen gösteriyoruz.
                     </p>
                     
@@ -192,7 +212,7 @@
                                 <i class="fa-solid fa-magnifying-glass-chart text-xl"></i>
                             </div>
                             <div>
-                                <h4 class="text-xl font-bold mb-1">Nokta Atışı Teşhis</h4>
+                                <h4 class="text-lg sm:text-xl font-bold mb-1">Nokta Atışı Teşhis</h4>
                                 <p class="text-gray-400 text-sm">Arızaları deneme-yanılma ile değil, teknik bilgi ve tecrübeyle ilk seferde doğru tespit ederiz.</p>
                             </div>
                         </div>
@@ -201,7 +221,7 @@
                                 <i class="fa-solid fa-shield-halved text-xl"></i>
                             </div>
                             <div>
-                                <h4 class="text-xl font-bold mb-1">Şeffaf Süreç</h4>
+                                <h4 class="text-lg sm:text-xl font-bold mb-1">Şeffaf Süreç</h4>
                                 <p class="text-gray-400 text-sm">Süpriz masraflar çıkmaz. Yapılacak her işlem ve kullanılacak parça öncesinde size onaylatılır.</p>
                             </div>
                         </div>
@@ -210,7 +230,7 @@
                                 <i class="fa-solid fa-stopwatch text-xl"></i>
                             </div>
                             <div>
-                                <h4 class="text-xl font-bold mb-1">Zamanında Teslim</h4>
+                                <h4 class="text-lg sm:text-xl font-bold mb-1">Zamanında Teslim</h4>
                                 <p class="text-gray-400 text-sm">Söz verdiğimiz gün ve saatte motorunuzu eksiksiz olarak teslime hazır hale getiririz.</p>
                             </div>
                         </div>
@@ -224,9 +244,9 @@
     <section id="hizmetler" class="py-24 bg-brand-dark px-4">
         <div class="container mx-auto max-w-6xl">
             <div class="text-center mb-16">
-                <h2 class="text-4xl md:text-5xl font-black mb-4 uppercase">Hizmetlerimiz</h2>
+                <h2 class="text-3xl sm:text-4xl md:text-5xl font-black mb-4 uppercase">Hizmetlerimiz</h2>
                 <div class="w-24 h-1.5 bg-brand-red mx-auto"></div>
-                <p class="mt-6 text-gray-400 max-w-2xl mx-auto">Motosiklet ve scooterlarınız için A'dan Z'ye profesyonel tamir, bakım ve imalat çözümleri.</p>
+                <p class="mt-6 text-gray-400 max-w-2xl mx-auto text-sm sm:text-base">Motosiklet ve scooterlarınız için A'dan Z'ye profesyonel tamir, bakım ve imalat çözümleri.</p>
             </div>
             
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -264,7 +284,7 @@
                 <div class="bg-brand-gray p-8 rounded-lg border border-brand-light hover:border-brand-red transition-all duration-300 hover:-translate-y-2 group">
                     <i class="fa-solid fa-dharmachakra text-4xl text-brand-red mb-6 group-hover:scale-110 transition"></i>
                     <h3 class="text-xl font-bold mb-3 uppercase">Jant & Fren Kaliper</h3>
-                    <p class="text-gray-400 text-sm leading-relaxed">Eğilmiş jantların presle düzeltilmesi, fren kaliper tamiri, hidrolik sıvı değişimi ve lastik montajı.</p>
+                    <p class="text-gray-400 text-sm leading-relaxed">Eğilmiş jantların presle düzeltilmesi, fren kaliperi tamiri, hidrolik sıvı değişimi ve lastik montajı.</p>
                 </div>
             </div>
         </div>
@@ -274,18 +294,18 @@
     <section class="py-12 bg-brand-dark px-4">
         <div class="container mx-auto max-w-5xl">
             <div class="pattern-bg rounded-xl p-1 shadow-2xl relative overflow-hidden">
-                <div class="bg-brand-dark p-8 md:p-12 h-full w-full flex flex-col md:flex-row items-center justify-between gap-8 rounded-lg">
-                    <div class="flex items-center gap-6">
+                <div class="bg-brand-dark p-6 sm:p-8 md:p-12 h-full w-full flex flex-col md:flex-row items-center justify-between gap-8 rounded-lg">
+                    <div class="flex flex-col sm:flex-row items-center text-center sm:text-left gap-6">
                         <div class="w-20 h-20 rounded-full bg-brand-red flex items-center justify-center shrink-0">
                             <i class="fa-solid fa-triangle-exclamation text-4xl text-white"></i>
                         </div>
                         <div>
                             <h3 class="text-2xl md:text-3xl font-black text-white uppercase mb-2">Önemli Atölye Kuralı</h3>
-                            <p class="text-brand-red font-bold text-lg uppercase tracking-wide">Dışarıdan Motor Yağı Getirmeyiniz!</p>
+                            <p class="text-brand-red font-bold text-base sm:text-lg uppercase tracking-wide">Dışarıdan Motor Yağı Getirmeyiniz!</p>
                         </div>
                     </div>
                     <div class="md:w-1/2">
-                        <p class="text-gray-300 text-sm md:text-base leading-relaxed">
+                        <p class="text-gray-300 text-sm md:text-base leading-relaxed text-center sm:text-left">
                             Kullanılan yağın orijinalliğini, uygunluğunu ve yapılan işlemin sorumluluğunu güvence altına alabilmemiz için <strong>motor yağı istisnasız olarak tarafımızdan temin edilmektedir.</strong> Orijinal Putoline, Repsol ve Castrol ürünleri kullanılarak motorunuzun ömrü garanti altına alınır. Bu kural esnetilemez.
                         </p>
                     </div>
@@ -298,7 +318,7 @@
     <section id="surec" class="py-24 bg-brand-gray px-4">
         <div class="container mx-auto max-w-6xl">
             <div class="text-center mb-20">
-                <h2 class="text-4xl md:text-5xl font-black mb-4 uppercase">Nasıl <span class="text-brand-red">Çalışıyoruz?</span></h2>
+                <h2 class="text-3xl sm:text-4xl md:text-5xl font-black mb-4 uppercase">Nasıl <span class="text-brand-red">Çalışıyoruz?</span></h2>
                 <div class="w-24 h-1.5 bg-brand-red mx-auto"></div>
             </div>
 
@@ -350,7 +370,7 @@
     <section id="yorumlar" class="py-24 bg-brand-dark px-4">
         <div class="container mx-auto max-w-6xl">
             <div class="text-center mb-16">
-                <h2 class="text-4xl md:text-5xl font-black mb-4 uppercase">Müşteri <span class="text-brand-red">Yorumları</span></h2>
+                <h2 class="text-3xl sm:text-4xl md:text-5xl font-black mb-4 uppercase">Müşteri <span class="text-brand-red">Yorumları</span></h2>
                 <div class="w-24 h-1.5 bg-brand-red mx-auto"></div>
             </div>
 
@@ -416,7 +436,7 @@
             <div class="space-y-4">
                 <!-- Soru 1 -->
                 <div class="bg-brand-dark border border-brand-light rounded-lg">
-                    <button class="faq-btn w-full text-left px-6 py-4 font-bold text-lg flex justify-between items-center focus:outline-none hover:text-brand-red transition">
+                    <button class="faq-btn w-full text-left px-6 py-4 font-bold text-base sm:text-lg flex justify-between items-center focus:outline-none hover:text-brand-red transition">
                         Randevusuz gelebilir miyim?
                         <i class="fa-solid fa-chevron-down faq-icon text-brand-red"></i>
                     </button>
@@ -426,7 +446,7 @@
                 </div>
                 <!-- Soru 2 -->
                 <div class="bg-brand-dark border border-brand-light rounded-lg">
-                    <button class="faq-btn w-full text-left px-6 py-4 font-bold text-lg flex justify-between items-center focus:outline-none hover:text-brand-red transition">
+                    <button class="faq-btn w-full text-left px-6 py-4 font-bold text-base sm:text-lg flex justify-between items-center focus:outline-none hover:text-brand-red transition">
                         Kredi kartı geçerli mi?
                         <i class="fa-solid fa-chevron-down faq-icon text-brand-red"></i>
                     </button>
@@ -436,7 +456,7 @@
                 </div>
                 <!-- Soru 3 -->
                 <div class="bg-brand-dark border border-brand-light rounded-lg">
-                    <button class="faq-btn w-full text-left px-6 py-4 font-bold text-lg flex justify-between items-center focus:outline-none hover:text-brand-red transition">
+                    <button class="faq-btn w-full text-left px-6 py-4 font-bold text-base sm:text-lg flex justify-between items-center focus:outline-none hover:text-brand-red transition">
                         Hangi markalara bakıyorsunuz?
                         <i class="fa-solid fa-chevron-down faq-icon text-brand-red"></i>
                     </button>
@@ -495,9 +515,9 @@
                 </div>
                 
                 <!-- Google Harita (3 Kolon Genişliğinde) -->
-                <div class="lg:col-span-3 h-[450px] bg-brand-gray rounded-lg overflow-hidden border border-brand-light shadow-2xl relative">
+                <div class="lg:col-span-3 h-[400px] sm:h-[450px] bg-brand-gray rounded-lg overflow-hidden border border-brand-light shadow-2xl relative">
                     <iframe 
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3013.9188448835817!2d29.13504!3d40.93339!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cac46d9b5e5a25%3A0xc3f5f375f4d8e573!2sBa%C4%9Flarba%C5%9F%C4%B1%2C%20Cemal%20Bey%20Cd.%20No%3A7%2C%2034844%20Maltepe%2F%C4%B0stanbul!5e0!3m2!1str!2str!4v1690000000000!5m2!1str!2str" 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3013.9188448835817!2d29.13504!3d40.93339!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cac46d9b5e5a25%3A0xc3f5f375f4d8e573!2sBa%C4%9Flarba%C5%9F%C4%B1%2C%20Cemal%20Bey%20Cd.%20No%3A7%2C%2034844%20Maltepe%2F%C4%B1stanbul!5e0!3m2!1str!2str!4v1690000000000!5m2!1str!2str" 
                         width="100%" height="100%" style="border:0; filter: contrast(1.1) grayscale(0.2);" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
                     </iframe>
                 </div>
@@ -528,8 +548,36 @@
         </div>
     </footer>
 
-    <!-- FAQ Accordion JS -->
+    <!-- JavaScript: Mobil Menü & FAQ Accordion -->
     <script>
+        // Mobil Menü Aç/Kapat Mantığı
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            const icon = menuBtn.querySelector('i');
+            if (mobileMenu.classList.contains('hidden')) {
+                icon.classList.remove('fa-xmark');
+                icon.classList.add('fa-bars');
+            } else {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-xmark');
+            }
+        });
+
+        // Mobilde bir bağlantıya tıklandığında menüyü otomatik kapat
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                const icon = menuBtn.querySelector('i');
+                icon.classList.remove('fa-xmark');
+                icon.classList.add('fa-bars');
+            });
+        });
+
+        // SSS (FAQ) Accordion Mantığı
         document.querySelectorAll('.faq-btn').forEach(button => {
             button.addEventListener('click', () => {
                 const content = button.nextElementSibling;
