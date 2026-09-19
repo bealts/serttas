@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Moto Serttaş - Maltepe Motosiklet ve Scooter Servisi. Garantili işçilik, motor revizyonu, elektrik arıza tespiti, şase düzeltme ve argon kaynak işlemleri.">
+    <meta name="keywords" content="Moto Serttaş, Maltepe motosiklet servisi, motosiklet tamiri, scooter servisi, motor revizyonu, şase tamiri, argon kaynağı">
+    <title>Moto Serttaş | Profesyonel Motosiklet Servisi</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- FontAwesome İkonlar -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            red: '#dc2626',
+                            dark: '#09090b', /* Zinc-950 daha tok bir siyah */
+                            gray: '#18181b', /* Zinc-900 */
+                            light: '#27272a' /* Zinc-800 */
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Montserrat', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        html { scroll-behavior: smooth; }
+        
+        /* Marka Şeridi */
+        .marquee-container {
+            overflow: hidden;
+            white-space: nowrap;
+            width: 100%;
+            background-color: #000;
+        }
+        .marquee {
+            display: inline-block;
+            animation: marquee 30s linear infinite;
+        }
+        @keyframes marquee {
+            0% { transform: translateX(100%); }
+            100% { transform: translateX(-100%); }
+        }
+
+        /* Acil Kural Pattern */
+        .pattern-bg {
+            background-image: repeating-linear-gradient(
+                45deg,
+                #dc2626,
+                #dc2626 10px,
+                #b91c1c 10px,
+                #b91c1c 20px
+            );
+        }
+
+        /* FAQ Accordion Transition */
+        .faq-content {
+            transition: max-height 0.3s ease-out, opacity 0.3s ease-out, padding 0.3s ease;
+            max-height: 0;
+            opacity: 0;
+            overflow: hidden;
+        }
+        .faq-content.open {
+            max-height: 500px;
+            opacity: 1;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+        }
+        .faq-icon {
+            transition: transform 0.3s ease;
+        }
+        .faq-btn.active .faq-icon {
+            transform: rotate(180deg);
+        }
+    </style>
+</head>
+<body class="bg-brand-dark text-white font-sans antialiased selection:bg-brand-red selection:text-white overflow-x-hidden">
+
+    <!-- Navbar -->
+    <header class="fixed w-full z-50 bg-brand-dark/95 backdrop-blur-md border-b border-brand-light">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-black text-brand-red tracking-widest uppercase">
+                Moto <span class="text-white">Serttaş</span>
+            </a>
+            <nav class="hidden lg:flex space-x-8 font-semibold text-sm">
+                <a href="#neden-biz" class="hover:text-brand-red transition">Neden Biz?</a>
+                <a href="#hizmetler" class="hover:text-brand-red transition">Hizmetlerimiz</a>
+                <a href="#surec" class="hover:text-brand-red transition">İşleyiş</a>
+                <a href="#yorumlar" class="hover:text-brand-red transition">Yorumlar</a>
+                <a href="#iletisim" class="hover:text-brand-red transition">İletişim</a>
+            </nav>
+            <a href="https://wa.me/905325014710" target="_blank" class="hidden md:flex bg-brand-red text-white px-6 py-2 rounded-md font-bold hover:bg-red-700 transition items-center gap-2">
+                <i class="fa-brands fa-whatsapp text-xl"></i> Randevu Al
+            </a>
+            <!-- Mobil Menü Butonu (Görsel amaçlı) -->
+            <button class="lg:hidden text-2xl text-white hover:text-brand-red"><i class="fa-solid fa-bars"></i></button>
+        </div>
+    </header>
+
+    <!-- Hero Bölümü -->
+    <section class="pt-32 pb-20 px-4 min-h-[95vh] flex flex-col justify-center relative bg-center bg-cover bg-no-repeat" style="background-image: linear-gradient(to right, rgba(9, 9, 11, 0.95), rgba(9, 9, 11, 0.7)), url('https://images.unsplash.com/photo-1568772585407-9361f9bf3a87?q=80&w=2070&auto=format&fit=crop');">
+        <div class="container mx-auto max-w-6xl">
+            <div class="max-w-3xl">
+                <div class="inline-block bg-brand-light text-brand-red font-bold px-4 py-1 rounded-full text-sm mb-6 uppercase tracking-wider border border-brand-red/30">
+                    Maltepe'nin Güvenilir Adresi
+                </div>
+                <h1 class="text-5xl md:text-7xl font-black mb-6 leading-tight uppercase">
+                    Motorunuz İçin <br>
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-red to-red-500">Kusursuz İşçilik</span>
+                </h1>
+                <p class="text-lg md:text-xl text-gray-300 mb-10 max-w-2xl leading-relaxed">
+                    Periyodik bakımdan motor revizyonuna, argon kaynağından şase düzeltmeye kadar tüm mekanik ve elektronik ihtiyaçlarınızda garantili çözümler sunuyoruz.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="https://wa.me/905325014710" target="_blank" class="bg-brand-red text-white px-8 py-4 rounded-md font-bold hover:bg-red-700 transition text-center uppercase tracking-wide flex items-center justify-center gap-2 text-lg">
+                        <i class="fa-solid fa-phone"></i> 0532 501 47 10
+                    </a>
+                    <a href="#hizmetler" class="border border-gray-600 text-white px-8 py-4 rounded-md font-bold hover:bg-brand-light transition text-center uppercase tracking-wide text-lg">
+                        Hizmetleri İncele
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- İstatistikler Banner -->
+    <div class="bg-brand-red py-8 border-y border-red-800">
+        <div class="container mx-auto px-4 max-w-6xl">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center divide-x divide-red-800/50">
+                <div>
+                    <div class="text-3xl md:text-4xl font-black text-white mb-1">15+</div>
+                    <div class="text-red-200 text-sm font-bold uppercase tracking-wider">Yıllık Tecrübe</div>
+                </div>
+                <div>
+                    <div class="text-3xl md:text-4xl font-black text-white mb-1">%100</div>
+                    <div class="text-red-200 text-sm font-bold uppercase tracking-wider">Garantili İşçilik</div>
+                </div>
+                <div>
+                    <div class="text-3xl md:text-4xl font-black text-white mb-1">5000+</div>
+                    <div class="text-red-200 text-sm font-bold uppercase tracking-wider">Tamamlanan İşlem</div>
+                </div>
+                <div>
+                    <div class="text-3xl md:text-4xl font-black text-white mb-1">Tüm</div>
+                    <div class="text-red-200 text-sm font-bold uppercase tracking-wider">Marka Modeller</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Neden Biz? (Dinamik Usta Görselli) -->
+    <section id="neden-biz" class="py-24 bg-brand-gray px-4">
+        <div class="container mx-auto max-w-6xl">
+            <div class="flex flex-col lg:flex-row gap-16 items-center">
+                <!-- Fotoğraf Alanı: İş üzeri modern mekanik detay -->
+                <div class="lg:w-1/2 relative">
+                    <div class="absolute inset-0 bg-brand-red rounded-lg transform translate-x-4 translate-y-4"></div>
+                    <img src="https://images.unsplash.com/photo-1625047509248-ec889cbff17f?q=80&w=1000&auto=format&fit=crop" alt="Usta İş Başında" class="relative z-10 rounded-lg shadow-2xl w-full h-[500px] object-cover grayscale-[20%]">
+                    <!-- Rozet -->
+                    <div class="absolute -bottom-6 -left-6 bg-brand-dark p-6 rounded-lg border border-brand-light z-20 flex items-center gap-4 shadow-xl">
+                        <i class="fa-solid fa-wrench text-4xl text-brand-red"></i>
+                        <div>
+                            <div class="font-black text-xl">Usta Eller</div>
+                            <div class="text-sm text-gray-400">Modern Ekipman</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Metin Alanı -->
+                <div class="lg:w-1/2">
+                    <h2 class="text-sm font-bold text-brand-red uppercase tracking-widest mb-2">Hakkımızda</h2>
+                    <h3 class="text-4xl md:text-5xl font-black mb-6 uppercase">Motorunuz <br>Emin Ellerde</h3>
+                    <p class="text-gray-400 text-lg mb-8 leading-relaxed">
+                        Motosikletiniz sadece bir ulaşım aracı değil, bir tutkudur. Biz de bu tutkuyu sizinle paylaşıyor, atölyemize giren her motosiklete kendi motorumuzmuş gibi özen gösteriyoruz.
+                    </p>
+                    
+                    <div class="space-y-6">
+                        <div class="flex gap-4">
+                            <div class="w-12 h-12 rounded bg-brand-light flex items-center justify-center shrink-0 text-brand-red">
+                                <i class="fa-solid fa-magnifying-glass-chart text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-bold mb-1">Nokta Atışı Teşhis</h4>
+                                <p class="text-gray-400 text-sm">Arızaları deneme-yanılma ile değil, teknik bilgi ve tecrübeyle ilk seferde doğru tespit ederiz.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4">
+                            <div class="w-12 h-12 rounded bg-brand-light flex items-center justify-center shrink-0 text-brand-red">
+                                <i class="fa-solid fa-shield-halved text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-bold mb-1">Şeffaf Süreç</h4>
+                                <p class="text-gray-400 text-sm">Süpriz masraflar çıkmaz. Yapılacak her işlem ve kullanılacak parça öncesinde size onaylatılır.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4">
+                            <div class="w-12 h-12 rounded bg-brand-light flex items-center justify-center shrink-0 text-brand-red">
+                                <i class="fa-solid fa-stopwatch text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-bold mb-1">Zamanında Teslim</h4>
+                                <p class="text-gray-400 text-sm">Söz verdiğimiz gün ve saatte motorunuzu eksiksiz olarak teslime hazır hale getiririz.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hizmetler Kartları -->
+    <section id="hizmetler" class="py-24 bg-brand-dark px-4">
+        <div class="container mx-auto max-w-6xl">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-black mb-4 uppercase">Hizmetlerimiz</h2>
+                <div class="w-24 h-1.5 bg-brand-red mx-auto"></div>
+                <p class="mt-6 text-gray-400 max-w-2xl mx-auto">Motosiklet ve scooterlarınız için A'dan Z'ye profesyonel tamir, bakım ve imalat çözümleri.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Şase -->
+                <div class="bg-brand-gray p-8 rounded-lg border border-brand-light hover:border-brand-red transition-all duration-300 hover:-translate-y-2 group">
+                    <i class="fa-solid fa-motorcycle text-4xl text-brand-red mb-6 group-hover:scale-110 transition"></i>
+                    <h3 class="text-xl font-bold mb-3 uppercase">Şase Düzeltme</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">Kazalı araçlarınızın şase onarımı ve lazer ölçümle kusursuz düzeltme işlemleri. Sürüş güvenliği garantisi.</p>
+                </div>
+                <!-- Kaynak -->
+                <div class="bg-brand-gray p-8 rounded-lg border border-brand-light hover:border-brand-red transition-all duration-300 hover:-translate-y-2 group">
+                    <i class="fa-solid fa-fire text-4xl text-brand-red mb-6 group-hover:scale-110 transition"></i>
+                    <h3 class="text-xl font-bold mb-3 uppercase">Argon & Alüminyum</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">Argon Tig kaynak teknolojisi, kırık karter tamiri, torna parça revizyon ve özel parça imalatı.</p>
+                </div>
+                <!-- Revizyon -->
+                <div class="bg-brand-gray p-8 rounded-lg border border-brand-light hover:border-brand-red transition-all duration-300 hover:-translate-y-2 group">
+                    <i class="fa-solid fa-gears text-4xl text-brand-red mb-6 group-hover:scale-110 transition"></i>
+                    <h3 class="text-xl font-bold mb-3 uppercase">Motor Revizyonu</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">Alt ve üst motor kapsamlı revizyon, silindir rektifiye, piston sekman değişimi işlemleri.</p>
+                </div>
+                <!-- Elektrik -->
+                <div class="bg-brand-gray p-8 rounded-lg border border-brand-light hover:border-brand-red transition-all duration-300 hover:-translate-y-2 group">
+                    <i class="fa-solid fa-bolt text-4xl text-brand-red mb-6 group-hover:scale-110 transition"></i>
+                    <h3 class="text-xl font-bold mb-3 uppercase">Elektrik Tesisatı</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">Stator sarımı, konjektör arızaları, beyin (ECU) sorunları ve karmaşık tesisat arızalarının nokta atışı tespiti.</p>
+                </div>
+                <!-- Scooter -->
+                <div class="bg-brand-gray p-8 rounded-lg border border-brand-light hover:border-brand-red transition-all duration-300 hover:-translate-y-2 group">
+                    <i class="fa-solid fa-moped text-4xl text-brand-red mb-6 group-hover:scale-110 transition"></i>
+                    <h3 class="text-xl font-bold mb-3 uppercase">Scooter Servisi</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">Varyatör bakımı, orijinal kayış değişimi, baga kontrolleri ve spesifik scooter aktarma sorunları çözümleri.</p>
+                </div>
+                <!-- Jant -->
+                <div class="bg-brand-gray p-8 rounded-lg border border-brand-light hover:border-brand-red transition-all duration-300 hover:-translate-y-2 group">
+                    <i class="fa-solid fa-dharmachakra text-4xl text-brand-red mb-6 group-hover:scale-110 transition"></i>
+                    <h3 class="text-xl font-bold mb-3 uppercase">Jant & Fren Kaliper</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">Eğilmiş jantların presle düzeltilmesi, fren kaliper tamiri, hidrolik sıvı değişimi ve lastik montajı.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Altın Kural Banner (Dışarıdan Yağ Yasak) -->
+    <section class="py-12 bg-brand-dark px-4">
+        <div class="container mx-auto max-w-5xl">
+            <div class="pattern-bg rounded-xl p-1 shadow-2xl relative overflow-hidden">
+                <div class="bg-brand-dark p-8 md:p-12 h-full w-full flex flex-col md:flex-row items-center justify-between gap-8 rounded-lg">
+                    <div class="flex items-center gap-6">
+                        <div class="w-20 h-20 rounded-full bg-brand-red flex items-center justify-center shrink-0">
+                            <i class="fa-solid fa-triangle-exclamation text-4xl text-white"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl md:text-3xl font-black text-white uppercase mb-2">Önemli Atölye Kuralı</h3>
+                            <p class="text-brand-red font-bold text-lg uppercase tracking-wide">Dışarıdan Motor Yağı Getirmeyiniz!</p>
+                        </div>
+                    </div>
+                    <div class="md:w-1/2">
+                        <p class="text-gray-300 text-sm md:text-base leading-relaxed">
+                            Kullanılan yağın orijinalliğini, uygunluğunu ve yapılan işlemin sorumluluğunu güvence altına alabilmemiz için <strong>motor yağı istisnasız olarak tarafımızdan temin edilmektedir.</strong> Orijinal Putoline, Repsol ve Castrol ürünleri kullanılarak motorunuzun ömrü garanti altına alınır. Bu kural esnetilemez.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Çalışma Süreci (4 Adım) -->
+    <section id="surec" class="py-24 bg-brand-gray px-4">
+        <div class="container mx-auto max-w-6xl">
+            <div class="text-center mb-20">
+                <h2 class="text-4xl md:text-5xl font-black mb-4 uppercase">Nasıl <span class="text-brand-red">Çalışıyoruz?</span></h2>
+                <div class="w-24 h-1.5 bg-brand-red mx-auto"></div>
+            </div>
+
+            <div class="relative">
+                <!-- Yatay çizgi (Desktop) -->
+                <div class="hidden md:block absolute top-1/2 left-0 w-full h-1 bg-brand-light -translate-y-1/2 z-0"></div>
+                <!-- Dikey çizgi (Mobile) -->
+                <div class="md:hidden absolute top-0 left-8 w-1 h-full bg-brand-light z-0"></div>
+
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-12 md:gap-6 relative z-10">
+                    <!-- Adım 1 -->
+                    <div class="flex flex-col md:items-center relative">
+                        <div class="w-16 h-16 bg-brand-dark border-4 border-brand-red rounded-full flex items-center justify-center font-black text-xl text-white mb-6 absolute md:relative left-0 md:left-auto top-0 z-10">1</div>
+                        <div class="pl-24 md:pl-0 md:text-center mt-2 md:mt-0">
+                            <h4 class="text-xl font-bold mb-2 uppercase">Arıza Tespiti</h4>
+                            <p class="text-gray-400 text-sm">Motorunuz atölyeye girdiğinde ustamız tarafından detaylı bir mekanik ve elektronik incelemeden geçer.</p>
+                        </div>
+                    </div>
+                    <!-- Adım 2 -->
+                    <div class="flex flex-col md:items-center relative">
+                        <div class="w-16 h-16 bg-brand-dark border-4 border-brand-red rounded-full flex items-center justify-center font-black text-xl text-white mb-6 absolute md:relative left-0 md:left-auto top-0 z-10">2</div>
+                        <div class="pl-24 md:pl-0 md:text-center mt-2 md:mt-0">
+                            <h4 class="text-xl font-bold mb-2 uppercase">Fiyatlandırma</h4>
+                            <p class="text-gray-400 text-sm">Yapılacak işlemler ve parça maliyetleri liste halinde çıkarılarak onayınız için size sunulur.</p>
+                        </div>
+                    </div>
+                    <!-- Adım 3 -->
+                    <div class="flex flex-col md:items-center relative">
+                        <div class="w-16 h-16 bg-brand-red rounded-full flex items-center justify-center font-black text-xl text-white mb-6 absolute md:relative left-0 md:left-auto top-0 z-10 shadow-[0_0_15px_rgba(220,38,38,0.5)]">3</div>
+                        <div class="pl-24 md:pl-0 md:text-center mt-2 md:mt-0">
+                            <h4 class="text-xl font-bold mb-2 uppercase text-brand-red">Onarım Başlar</h4>
+                            <p class="text-gray-400 text-sm">Onayınız sonrası orijinal/kaliteli yan sanayi parçalar ve profesyonel el aletleriyle işleme başlanır.</p>
+                        </div>
+                    </div>
+                    <!-- Adım 4 -->
+                    <div class="flex flex-col md:items-center relative">
+                        <div class="w-16 h-16 bg-brand-dark border-4 border-brand-red rounded-full flex items-center justify-center font-black text-xl text-white mb-6 absolute md:relative left-0 md:left-auto top-0 z-10">4</div>
+                        <div class="pl-24 md:pl-0 md:text-center mt-2 md:mt-0">
+                            <h4 class="text-xl font-bold mb-2 uppercase">Teslimat</h4>
+                            <p class="text-gray-400 text-sm">Son test sürüşü ve fren/sıvı kontrolleri yapıldıktan sonra motorunuz sorunsuz şekilde teslim edilir.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Müşteri Yorumları (Testimonials) -->
+    <section id="yorumlar" class="py-24 bg-brand-dark px-4">
+        <div class="container mx-auto max-w-6xl">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-black mb-4 uppercase">Müşteri <span class="text-brand-red">Yorumları</span></h2>
+                <div class="w-24 h-1.5 bg-brand-red mx-auto"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Yorum 1 -->
+                <div class="bg-brand-gray p-8 rounded-lg border border-brand-light relative">
+                    <i class="fa-solid fa-quote-right absolute top-6 right-8 text-4xl text-brand-light opacity-50"></i>
+                    <div class="flex text-yellow-500 mb-4 text-sm">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-gray-300 text-sm mb-6 leading-relaxed italic">"Serkan usta ile 2-3 aydır tanışıyorum motorumun tüm bakımlarını kendisi yapar, geçenlerdede motoruma subap ayarı yaptı gerçekten çok temiz ve sağlam işçiliği var bir şey söylemememe rağmen içinden gelerek kazada yamulan vites pedalımıda düzeltmiş. Hem kendisi hemde ustalığı çok güzel bir insan, herkese tavsiye ederim."</p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 bg-brand-dark rounded-full flex items-center justify-center font-bold border border-brand-red text-brand-red">KB</div>
+                        <div>
+                            <h5 class="font-bold uppercase text-sm">Kaan B.</h5>
+                            <span class="text-xs text-gray-500">Motosiklet Sahibi</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Yorum 2 -->
+                <div class="bg-brand-gray p-8 rounded-lg border border-brand-light relative">
+                    <i class="fa-solid fa-quote-right absolute top-6 right-8 text-4xl text-brand-light opacity-50"></i>
+                    <div class="flex text-yellow-500 mb-4 text-sm">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-gray-300 text-sm mb-6 leading-relaxed italic">"Herkese tavsiye ederim, muhteşem bir usta. Motosikletimin tüm sorunlarını en iyi şekilde tamirini sağladı. Buraya gelmeden önce çok ustayla çalıştım, buradaki ustanın çok iyi işçiliği var. Kimsede olmayan kaynak becerisini ilk kez burada gördüm."</p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 bg-brand-dark rounded-full flex items-center justify-center font-bold border border-brand-red text-brand-red">BS</div>
+                        <div>
+                            <h5 class="font-bold uppercase text-sm">Berk S.</h5>
+                            <span class="text-xs text-gray-500">Müşteri</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Yorum 3 -->
+                <div class="bg-brand-gray p-8 rounded-lg border border-brand-light relative">
+                    <i class="fa-solid fa-quote-right absolute top-6 right-8 text-4xl text-brand-light opacity-50"></i>
+                    <div class="flex text-yellow-500 mb-4 text-sm">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-gray-300 text-sm mb-6 leading-relaxed italic">"Herkese kolay gelsin işletmeyi yakın zamanda tanıdım honda pcx 2022 model motorumun elektirik aksamında sorunlar vardı serviste 12 bin tl ücret istediler bu ücretin yarı parasına hem elektronik sorunlarım giderildi hemde değişmesi gereken varyatörüm rulmanları değişerek kurtarıldı serkan ustama çok teşekkür ediyorum"</p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 bg-brand-dark rounded-full flex items-center justify-center font-bold border border-brand-red text-brand-red">YT</div>
+                        <div>
+                            <h5 class="font-bold uppercase text-sm">Yavuz T.</h5>
+                            <span class="text-xs text-gray-500">Scooter Kullanıcısı</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sıkça Sorulan Sorular (Accordion) -->
+    <section class="py-24 bg-brand-gray px-4 border-y border-brand-light">
+        <div class="container mx-auto max-w-4xl">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-black mb-4 uppercase">Sıkça Sorulan <span class="text-brand-red">Sorular</span></h2>
+            </div>
+            
+            <div class="space-y-4">
+                <!-- Soru 1 -->
+                <div class="bg-brand-dark border border-brand-light rounded-lg">
+                    <button class="faq-btn w-full text-left px-6 py-4 font-bold text-lg flex justify-between items-center focus:outline-none hover:text-brand-red transition">
+                        Randevusuz gelebilir miyim?
+                        <i class="fa-solid fa-chevron-down faq-icon text-brand-red"></i>
+                    </button>
+                    <div class="faq-content px-6 text-gray-400 text-sm">
+                        Genel kontrol ve acil durumlar için uğrayabilirsiniz ancak atölye yoğunluğumuz sebebiyle uzun süreli bakım ve onarım işlemleri için mutlaka önceden WhatsApp üzerinden randevu almanızı rica ederiz.
+                    </div>
+                </div>
+                <!-- Soru 2 -->
+                <div class="bg-brand-dark border border-brand-light rounded-lg">
+                    <button class="faq-btn w-full text-left px-6 py-4 font-bold text-lg flex justify-between items-center focus:outline-none hover:text-brand-red transition">
+                        Kredi kartı geçerli mi?
+                        <i class="fa-solid fa-chevron-down faq-icon text-brand-red"></i>
+                    </button>
+                    <div class="faq-content px-6 text-gray-400 text-sm">
+                        Evet, atölyemizde tüm kredi kartları geçerlidir. Parça ve işçilik dahil tüm ödemelerinizi kart ile yapabilirsiniz.
+                    </div>
+                </div>
+                <!-- Soru 3 -->
+                <div class="bg-brand-dark border border-brand-light rounded-lg">
+                    <button class="faq-btn w-full text-left px-6 py-4 font-bold text-lg flex justify-between items-center focus:outline-none hover:text-brand-red transition">
+                        Hangi markalara bakıyorsunuz?
+                        <i class="fa-solid fa-chevron-down faq-icon text-brand-red"></i>
+                    </button>
+                    <div class="faq-content px-6 text-gray-400 text-sm">
+                        Japon (Honda, Yamaha, Suzuki, Kawasaki), Avrupa, Çin ve Tayvan menşeli (QJ Motor, CFMoto, RKS, Kuba, SYM, Kymco vb.) dahil olmak üzere marka ayırt etmeksizin tüm motosiklet ve scooter modellerine hizmet vermekteyiz.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- İletişim & Harita (Split Design) -->
+    <section id="iletisim" class="py-24 bg-brand-dark px-4">
+        <div class="container mx-auto max-w-6xl">
+            <div class="grid grid-cols-1 lg:grid-cols-5 gap-12">
+                <!-- İletişim Bilgileri (2 Kolon Genişliğinde) -->
+                <div class="lg:col-span-2">
+                    <h2 class="text-4xl font-black mb-4 uppercase">Bize <span class="text-brand-red">Ulaşın</span></h2>
+                    <div class="w-16 h-1.5 bg-brand-red mb-10"></div>
+                    
+                    <p class="text-gray-400 mb-10 leading-relaxed text-sm">
+                        Motosikletinizin bakım zamanı geldiyse veya bir arıza yaşıyorsanız aşağıdaki bilgilerden veya doğrudan WhatsApp butonundan bize ulaşarak randevu alabilirsiniz.
+                    </p>
+                    
+                    <div class="space-y-8">
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 bg-brand-gray rounded border border-brand-light flex items-center justify-center shrink-0 text-brand-red">
+                                <i class="fa-solid fa-location-dot text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg mb-1 uppercase tracking-wide">Atölye Adresi</h4>
+                                <p class="text-gray-400 text-sm leading-relaxed">Bağlarbaşı Mahallesi, Cemal Bey Caddesi No:7<br>34844 Maltepe / İstanbul</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 bg-brand-gray rounded border border-brand-light flex items-center justify-center shrink-0 text-brand-red">
+                                <i class="fa-solid fa-phone text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg mb-1 uppercase tracking-wide">Telefon</h4>
+                                <a href="https://wa.me/905325014710" class="text-gray-400 hover:text-white transition text-sm">0532 501 47 10</a>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 bg-brand-gray rounded border border-brand-light flex items-center justify-center shrink-0 text-brand-red">
+                                <i class="fa-solid fa-envelope text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg mb-1 uppercase tracking-wide">E-Posta</h4>
+                                <a href="mailto:destek@motoserttas.tr" class="text-gray-400 hover:text-white transition text-sm">destek@motoserttas.tr</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Google Harita (3 Kolon Genişliğinde) -->
+                <div class="lg:col-span-3 h-[450px] bg-brand-gray rounded-lg overflow-hidden border border-brand-light shadow-2xl relative">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3013.9188448835817!2d29.13504!3d40.93339!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cac46d9b5e5a25%3A0xc3f5f375f4d8e573!2sBa%C4%9Flarba%C5%9F%C4%B1%2C%20Cemal%20Bey%20Cd.%20No%3A7%2C%2034844%20Maltepe%2F%C4%B0stanbul!5e0!3m2!1str!2str!4v1690000000000!5m2!1str!2str" 
+                        width="100%" height="100%" style="border:0; filter: contrast(1.1) grayscale(0.2);" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Kayan Marka Şeridi (Footer Üstü) -->
+    <div class="marquee-container py-4 border-t border-brand-light">
+        <div class="marquee text-gray-600 font-bold uppercase tracking-[0.3em] text-sm">
+            QJ MOTOR &nbsp; • &nbsp; CFMOTO &nbsp; • &nbsp; HONDA &nbsp; • &nbsp; YAMAHA &nbsp; • &nbsp; RKS &nbsp; • &nbsp; KUBA &nbsp; • &nbsp; VESPA &nbsp; • &nbsp; KYMCO &nbsp; • &nbsp; SYM &nbsp; • &nbsp; BAJAJ &nbsp; • &nbsp; KTM &nbsp; • &nbsp; KAWASAKI &nbsp; • &nbsp; SUZUKI &nbsp; • &nbsp; 
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-brand-dark py-12 text-center text-gray-500 border-t border-brand-light">
+        <div class="container mx-auto px-4">
+            <a href="#" class="inline-block text-2xl font-black text-white tracking-widest uppercase mb-4">
+                Moto <span class="text-brand-red">Serttaş</span>
+            </a>
+            <p class="mb-6 text-sm">Maltepe'nin Profesyonel Motosiklet ve Scooter Servisi</p>
+            <div class="flex justify-center gap-6 mb-8">
+                <a href="#" class="w-10 h-10 rounded-full bg-brand-gray flex items-center justify-center hover:bg-brand-red hover:text-white transition"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" class="w-10 h-10 rounded-full bg-brand-gray flex items-center justify-center hover:bg-brand-red hover:text-white transition"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="https://wa.me/905325014710" class="w-10 h-10 rounded-full bg-brand-gray flex items-center justify-center hover:bg-brand-red hover:text-white transition"><i class="fa-brands fa-whatsapp"></i></a>
+            </div>
+            <p class="text-xs">&copy; 2026 Moto Serttaş. Tüm hakları saklıdır. Tasarım ve Geliştirme özel olarak yapılmıştır.</p>
+        </div>
+    </footer>
+
+    <!-- FAQ Accordion JS -->
+    <script>
+        document.querySelectorAll('.faq-btn').forEach(button => {
+            button.addEventListener('click', () => {
+                const content = button.nextElementSibling;
+                const isActive = button.classList.contains('active');
+                
+                // Hepsini kapat
+                document.querySelectorAll('.faq-btn').forEach(btn => btn.classList.remove('active'));
+                document.querySelectorAll('.faq-content').forEach(cont => cont.classList.remove('open'));
+                
+                // Tıklananı aç (eğer zaten açık değilse)
+                if (!isActive) {
+                    button.classList.add('active');
+                    content.classList.add('open');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
